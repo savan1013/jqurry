@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade in, out and toggle</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            border-radius: 50%;
+            /* display: none; */
+        }
+
+        #div1 {
+            background-color: rgb(102, 157, 234);
+        }
+
+        #div2 {
+            background-color: rgb(161, 240, 125);
+        }
+
+        #div3 {
+            background-color: rgb(227, 141, 244);
+        }
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $("#btnfadeout").attr("disabled", true);
+
+        $("#btnfadein").click(function() {
+           
+            if (confirm("Are You Sure..?"))
+             {
+                $("#div1").fadeIn(1000);
+                $("#div2").fadeIn(2000);
+                $("#div3").fadeIn(3000);
+                $("#btnfadeout").attr("disabled", false);
+                $(this).attr("disabled", true);
+                $(this).css("display",none);
+
+            }
+        });
+
+        $("#btnfadeout").click(function() {
+            if (confirm("Are You Sure..?"))
+             {
+
+                $("#div1").fadeOut(1000);
+                $("#div2").fadeOut(2000); 
+                $("#div3").fadeOut(3000);
+                $("#btnfadein").attr("disabled", false);
+                $(this).attr("disabled", true);
+            }
+        });
+        $("#btnfadetoggle").click(function(){
+            if(confirm("Are You Sure..?"))
+            {
+                $("#div1").fadeToggle(1000);
+                $("#div2").fadeToggle(2000);
+                $("#div3").fadeToggle(3000);
+            }
+        });
+    });
+
+
+</script>
+</head>
+<body>
+    <button id="btnfadein">Fade in</button> &nbsp;<button id="btnfadeout">Fade out</button> &nbsp;<button
+        id="btnfadetoggle">Toggle for FadeIn and FadeOut</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>
+
+</html>

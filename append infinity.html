@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Mouse Event</title>
+</head>
+<body>
+    <h2>jquery Mouse Event</h2>
+    <section>
+        <div style="height: 700px;width: 5+00px;">
+            <h3>Append Method Demo</h3>
+            <style>
+                body{
+                    font-size: 30px;
+                }
+            </style>
+            <p>
+                MY NAME IS
+            </p>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                $(this).css("background-color","pink");
+                $(this).css("color","black");
+                $("div p").append("SAVAN PATEL"+"<br>");
+            })
+        })
+    </script>
+</body>
+</html>

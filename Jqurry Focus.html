@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#txtname").focus(function(){
+    $(this).css("background-color","#abdbe3");
+  });
+});
+$(document).ready(function(){
+  $("#txtage").focus(function(){
+    $(this).css("background-color","#873e23");
+  });
+});
+</script>
+</head>
+<body>
+    <h2>jquery focus event</h2>
+    Your Name: <input type="text" name="name" id="txtname"><br><br>
+    Your Age: <input type="number" name="age" id="txtage">
+</body>
+</html>

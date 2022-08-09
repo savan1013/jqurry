@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<h1>get the text focus</h1>
+<h2>get the text blur</h2>
+<input type="text" id="my text" value="a text field">
+<p>remove the focus click on lose focus button.</p>
+<button onclick="getfocus()">getfocus</button>
+<button onclick="loosefocus()">loosefocus</button>    
+<script>
+    function getfocus() {
+           document.getElementById("my text").focus();
+           document.getElementById("my text").style.background="pink";
+    }
+
+    function loosefocus() {
+        document. getElementById("my text").blur();
+        document. getElementById("my text").style.background="white";
+
+
+
+}
+</script>
+
+</body>
+</html>

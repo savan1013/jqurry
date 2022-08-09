@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>jQuery Mouse Event</title>
+</head>
+<body>
+    <h2>jQuery Mouse Event</h2>
+    <section>
+     <div style="height:400px;width:700px;">
+        <h3>Append method demo</h3>
+        <p> Welcome to the Div-E sem-3 JQUERY Append method tutoria</p>
+        </div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("div").click(function(){
+                 $(this).css("background-color","purple");
+                 $(this).css("color","white");
+                 $("div p").append("<br>"+"you clicked the div");
+                });
+            });
+
+            </script>
+    
+</body>
+</html>
